@@ -7,7 +7,7 @@
 			  <li><a href="./Menu.vue">Menu</a></li>
 			  <li><a href="./Produtos.vue">Produtos</a></li>
 			  <li><a href="./Clientes.vue">Clientes</a></li>
-			  <li><a href="#contact-form">Entre em Contato</a></li>
+			  <li><a href="#contact-form" class="contact-form">Entre em Contato</a></li>
 			</ul>
 		  </nav>
 		  <div class="overlay" id="overlay-menu"></div>
@@ -19,10 +19,8 @@
 		  <div class="container">
 			<div class="flex-container">
 			  <div class="about-text">
-				<h2>MUITO PRAZER, <span>SOMOS A LOGISPRINT</span></h2>
-				<p>Na Logisprint, acreditamos que a organização eficiente de dados é a base para o sucesso de qualquer negócio.</p>
-				<p>Somos uma empresa especializada no cadastro de clientes e produtos, combinando tecnologia de ponta com gestão de dados.</p>
-				<p>Com uma equipe dedicada e altamente qualificada, garantimos que suas informações sejam registradas de maneira precisa, segura e acessível.</p>
+				<h2>OLÁ, <span>SOMOS A LOGISPRINT</span></h2>
+				<p>Na Logisprint, acreditamos que a organização eficiente de dados é a base para o sucesso de qualquer negócio. Somos uma empresa especializada no cadastro de clientes e produtos, combinando tecnologia de ponta com gestão de dados. Com uma equipe dedicada e altamente qualificada, garantimos que suas informações sejam registradas de maneira precisa, segura e acessível.</p>
 			  </div>
 			</div>
 		  </div>
@@ -40,45 +38,29 @@
 			</form>
 		  </div>
 		</section>
+
+        <footer> 
+            <h7 class="h7"> Copyright © 2024 LogiSprint. Todos os direitos reservados. </h7>
+        </footer>
 	  </main>
-  
-	  <button id="scroll-to-top" @click="scrollToTop">Voltar ao Início</button>
+
 	</div>
   </template>
-  
-  <script>
-  export default {
-	methods: {
-	  scrollToTop() {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	  },
-	  scrollToSection(event) {
-		event.preventDefault();
-		const targetId = event.target.getAttribute('href');
-		const targetElement = document.querySelector(targetId);
-		if (targetElement) {
-		  window.scrollTo({
-			top: targetElement.offsetTop,
-			behavior: 'smooth'
-		  });
-		}
-	  }
-	},
-	mounted() {
-	  document.querySelectorAll('a[href^="#"]').forEach(link => {
-		link.addEventListener('click', this.scrollToSection);
-	  });
-	  window.addEventListener('scroll', () => {
-		const btn = document.getElementById('scroll-to-top');
-		btn.style.display = window.scrollY > 200 ? 'block' : 'none';
-	  });
-	}
-  }
-  </script>
   
   <style scoped>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
   
+  footer{
+    background-color: #0eceae;
+    height: 1cm;
+   
+  }
+  
+  .h7{
+    margin-left: 520px;
+  }
+
+
   * {
 	margin: 0;
 	padding: 0;
@@ -141,12 +123,18 @@
   }
   
   .about-text h2 span {
-	color: #007bff;
+	color: #0eceae;
   }
   
   .contact-section form {
 	display: flex;
 	flex-direction: column;
+  }
+
+  .contact-form {
+    background-color: #0eceae;
+    margin-left: 600px;
+    
   }
   
   .contact-section input,
@@ -158,7 +146,7 @@
   }
   
   .submit-button input {
-	background-color: #007bff;
+	background-color: #0eceae;
 	color: #fff;
 	border: none;
 	padding: 10px;
@@ -167,7 +155,7 @@
   }
   
   .submit-button input:hover {
-	background-color: #0056b3;
+	background-color: #0eceae;
   }
   
   #scroll-to-top {
@@ -175,7 +163,7 @@
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
-	background-color: #007bff;
+	background-color: #0eceae;
 	color: #fff;
 	border: none;
 	padding: 10px;
@@ -184,7 +172,7 @@
   }
   
   #scroll-to-top:hover {
-	background-color: #0056b3;
+	background-color: #0eceae;
   }
 
   .logo {
@@ -196,4 +184,5 @@
 
   }
   </style>
+  
   
