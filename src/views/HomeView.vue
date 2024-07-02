@@ -3,16 +3,22 @@
 
 <template>
    <main>
-		<img class="logo" src="../assets/logo.png"></img>		<section id="about-logisprint" class="about-section">
-		  <div class="container">
+
+<div class="bg-white/50 rounded-2xl border shadow ">
+	<div class="flex items-center justify-center">
+		<img class="h-96" src="../assets/logo.png"></img>		
+	</div>
+		<section id="about-logisprint" class="about-section">
+		<div class="container">
 			<div class="flex-container">
-			  <div class="about-text">
+			<div class="about-text">
 				<h2>OLÁ, <span>SOMOS A LOGISPRINT</span></h2>
 				<p>Na Logisprint, acreditamos que a organização eficiente de dados é a base para o sucesso de qualquer negócio. Somos uma empresa especializada no cadastro de clientes e produtos, combinando tecnologia de ponta com gestão de dados. Com uma equipe dedicada e altamente qualificada, garantimos que suas informações sejam registradas de maneira precisa, segura e acessível.</p>
-			  </div>
 			</div>
-		  </div>
+			</div>
+		</div>
 		</section>
+</div>
   
 		<section id="contact-form" class="contact-section">
 		  <div class="container">
@@ -84,10 +90,6 @@ display: block;
 
 .desktop-menu ul li a:hover {
 background-color: #f5f5f5;
-}
-
-main {
-padding-top: 100px;
 }
 
 section {
