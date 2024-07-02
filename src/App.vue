@@ -2,28 +2,20 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import UnauthenticatedLayout from './layout/UnauthenticatedLayout.vue'
+import AuthenticatedLayout from './layout/AuthenticatedLayout.vue'
 import { ref } from 'vue';
 
-const authenticated = ref(false);
+const authenticated = ref(true);
 
 </script>
 
 <template>
-  <header v-if="authenticated">
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <AuthenticatedLayout v-if="authenticated">
+      <RouterView/>
+  </AuthenticatedLayout>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/clientes">Clientes</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <UnauthenticatedLayout>
+  <UnauthenticatedLayout v-else>
     <RouterView />
   </UnauthenticatedLayout>
 </template>

@@ -27,9 +27,12 @@ const login = () => {
 }
 </script>
 <template>
-	<form @submit.prevent="login" class="flex flex-col space-y-4">
-		<Input type="text" v-model="form.email" placeholder="Email" />
-		<Input type="password" v-model="form.password" placeholder="Password" />
-		<Button type="submit" class="bg-green-500 hover:bg-green-600 text-white">Login</Button>
-	</form>
+	<div class="w-full flex justify-center flex-col items-center space-y-10">
+		<h1 class="text-2xl font-bold text-slate-700">Login</h1>
+		<form @submit.prevent="login" class="flex flex-col space-y-4 w-96">
+			<Input type="text" v-model="form.email" placeholder="Email" />
+			<Input type="password" v-model="form.password" placeholder="Password" />
+			<Button type="submit" class="bg-green-500 hover:bg-green-600 text-white">Login</Button>
+		</form>
+	</div>
 </template>
